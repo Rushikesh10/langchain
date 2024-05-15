@@ -4,7 +4,17 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_community.llms import Ollama
 import streamlit as st
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+
+# print(os.getenv())
+
+LANGCHAIN_TRACING_V2=os.getenv("LANGCHAIN_TRACING_V2")
+LANGCHAIN_ENDPOINT=os.getenv("LANGCHAIN_ENDPOINT")
+LANGCHAIN_API_KEY=os.getenv("LANGCHAIN_API_KEY")
+LANGCHAIN_PROJECT=os.getenv("LANGCHAIN_PROJECT")
 
 #Prompt Template
 
